@@ -89,3 +89,9 @@ class Accounts(AbstractBaseUser):
 @receiver(post_save, sender=Accounts)
 def user_save(sender, instance, **kwargs):
     FriendsList.objects.get_or_create(user=instance)
+
+class MyModel:
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
